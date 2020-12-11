@@ -66,18 +66,18 @@ class _PaymentMethodSettingsPageState extends State<PaymentMethodSettingsPage>
 
   updatePaymentMethodSettings() {
     //Temp disable
-    showSnack('You\'re not a Primary admin.\nAction not allowed!', context);
+    // showSnack('You\'re not a Primary admin.\nAction not allowed!', context);
 
-    // Map adminMap = Map();
-    // adminMap.putIfAbsent('cod', () => paymentMethods.cod);
-    // adminMap.putIfAbsent('stripe', () => paymentMethods.stripe);
-    // adminMap.putIfAbsent('paypal', () => paymentMethods.paypal);
-    // adminMap.putIfAbsent('razorpay', () => paymentMethods.razorpay);
-    // adminMap.putIfAbsent('storePickup', () => paymentMethods.storePickup);
+    Map adminMap = Map();
+    adminMap.putIfAbsent('cod', () => paymentMethods.cod);
+    adminMap.putIfAbsent('stripe', () => paymentMethods.stripe);
+    adminMap.putIfAbsent('paypal', () => paymentMethods.paypal);
+    adminMap.putIfAbsent('razorpay', () => paymentMethods.razorpay);
+    adminMap.putIfAbsent('storePickup', () => paymentMethods.storePickup);
 
-    // paymentMethodSettingsBloc.add(UpdatePaymentMethods(adminMap));
+    paymentMethodSettingsBloc.add(UpdatePaymentMethods(adminMap));
 
-    // inProgress = true;
+    inProgress = true;
   }
 
   showUpdatingDialog() {

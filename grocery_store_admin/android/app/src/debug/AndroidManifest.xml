@@ -1,4 +1,4 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.b2x.grocery_store_admin">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.cookhaven.grocery_store_admin">
     <!-- Flutter needs it to communicate with the running application
          to allow setting breakpoints, to provide hot reload, etc.
     -->

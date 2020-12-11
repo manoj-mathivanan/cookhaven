@@ -504,7 +504,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   });
                 },
                 leading: Icon(
-                  Icons.add_to_queue,
+                  Icons.attach_money,
                   size: 23.0,
                   color: _selectedPage == 9
                       ? Theme.of(context).primaryColor

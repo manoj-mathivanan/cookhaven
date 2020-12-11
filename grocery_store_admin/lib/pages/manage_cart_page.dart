@@ -138,22 +138,22 @@ class _ManageCartPageState extends State<ManageCartPage>
 
   updateCartInfo() async {
 //Temp disable
-    showSnack('You\'re not a Primary admin.\nAction not allowed!', context);
+    // showSnack('You\'re not a Primary admin.\nAction not allowed!', context);
 
-    // if (_formKey.currentState.validate()) {
-    //   FocusScope.of(context).unfocus();
-    //   _formKey.currentState.save();
+    if (_formKey.currentState.validate()) {
+      FocusScope.of(context).unfocus();
+      _formKey.currentState.save();
 
-    //   Map adminMap = Map();
-    //   adminMap.putIfAbsent('discountAmt', () => discountAmt);
-    //   adminMap.putIfAbsent('discountPer', () => discountPer);
-    //   adminMap.putIfAbsent('shippingAmt', () => shippingAmt);
-    //   adminMap.putIfAbsent('taxPer', () => taxPer);
+      Map adminMap = Map();
+      adminMap.putIfAbsent('discountAmt', () => discountAmt);
+      adminMap.putIfAbsent('discountPer', () => discountPer);
+      adminMap.putIfAbsent('shippingAmt', () => shippingAmt);
+      adminMap.putIfAbsent('taxPer', () => taxPer);
 
-    //   manageCartBloc.add(UpdateCartInfo(adminMap));
+      manageCartBloc.add(UpdateCartInfo(adminMap));
 
-    //   inProgress = true;
-    // }
+      inProgress = true;
+    }
   }
 
   @override

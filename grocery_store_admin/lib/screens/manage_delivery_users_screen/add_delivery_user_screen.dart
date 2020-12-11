@@ -510,7 +510,7 @@ class _AddDeliveryUserScreenState extends State<AddDeliveryUserScreen> {
                           letterSpacing: 0.5,
                         ),
                         textInputAction: TextInputAction.done,
-                        keyboardType: TextInputType.number,
+                        keyboardType: TextInputType.emailAddress,
                         decoration: InputDecoration(
                           contentPadding:
                               EdgeInsets.symmetric(horizontal: 15.0),

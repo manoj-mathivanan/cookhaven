@@ -1,4 +1,4 @@
-package com.b2x.grocery_store_admin;
+package com.cookhaven.grocery_store_admin;
 
 import io.flutter.app.FlutterApplication;
 import io.flutter.plugin.common.PluginRegistry;

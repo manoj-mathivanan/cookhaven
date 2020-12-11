@@ -7,6 +7,7 @@ import 'package:flushbar/flushbar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class InitialSetupScreen extends StatefulWidget {
   @override
@@ -60,10 +61,18 @@ class _InitialSetupScreenState extends State<InitialSetupScreen> {
             inProgress = false;
             showSnack('Initial setup successful!', context);
           });
-          Navigator.popAndPushNamed(context, '/home');
+          updateSharedPrefs();
         }
       }
     });
+  }
+
+  updateSharedPrefs() async {
+    SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
+
+    sharedPreferences.setBool('initialSetupCompleted', true);
+
+    Navigator.pushNamedAndRemoveUntil(context, '/home', (route) => false);
   }
 
   proceedSetup() {

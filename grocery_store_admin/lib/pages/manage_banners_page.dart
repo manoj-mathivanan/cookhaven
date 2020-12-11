@@ -821,7 +821,9 @@ class _ManageBannersPageState extends State<ManageBannersPage>
                             underline: SizedBox(
                               height: 0,
                             ),
-                            value: banner.middleBanner.category,
+                            value: banner.middleBanner.category.isEmpty
+                                ? null
+                                : banner.middleBanner.category,
                             isExpanded: true,
                             isDense: true,
                             style: TextStyle(
@@ -830,8 +832,7 @@ class _ManageBannersPageState extends State<ManageBannersPage>
                               fontFamily: 'Poppins',
                               fontWeight: FontWeight.w500,
                             ),
-                            items:
-                            categories
+                            items: categories
                                 .map((e) => DropdownMenuItem(
                                       child: Text(e.categoryName),
                                       value: e.categoryName,
@@ -1100,7 +1101,9 @@ class _ManageBannersPageState extends State<ManageBannersPage>
                             underline: SizedBox(
                               height: 0,
                             ),
-                            value: banner.bottomBanner.category,
+                            value: banner.bottomBanner.category.isEmpty
+                                ? null
+                                : banner.bottomBanner.category,
                             isExpanded: true,
                             isDense: true,
                             style: TextStyle(

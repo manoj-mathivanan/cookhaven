@@ -36,6 +36,7 @@ class _AddProductScreenState extends State<AddProductScreen> {
   List productImages;
   bool isAdding;
   Map<dynamic, dynamic> product = Map();
+  bool inStock, isListed, isFeatured;
 
   @override
   void initState() {
@@ -45,6 +46,9 @@ class _AddProductScreenState extends State<AddProductScreen> {
     subcategoryNames = List();
     productImages = List();
     isAdding = false;
+    inStock = false;
+    isListed = false;
+    isFeatured = false;
 
     allCategoriesBloc = BlocProvider.of<AllCategoriesBloc>(context);
     addNewProductBloc = BlocProvider.of<AddNewProductBloc>(context);
@@ -89,6 +93,9 @@ class _AddProductScreenState extends State<AddProductScreen> {
       if (_selectedCategory != null &&
           _selectedSubCategory != null &&
           productImages.length > 0) {
+        product.putIfAbsent('isListed', () => isListed);
+        product.putIfAbsent('inStock', () => inStock);
+        product.putIfAbsent('featured', () => isFeatured);
         product.putIfAbsent('productImages', () => productImages);
         addNewProductBloc.add(AddNewProductEvent(product));
         isAdding = true;

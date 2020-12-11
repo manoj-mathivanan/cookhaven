@@ -1233,17 +1233,17 @@ class UserDataProvider extends BaseUserDataProvider {
       await db.collection(Paths.adminsPath).doc(adminMap['uid']).set(
         {
           'uid': adminMap['uid'],
-          'primaryAdmin': adminMap['primaryAdmin'],
+          // 'primaryAdmin': adminMap['primaryAdmin'],
           'name': adminMap['name'],
           'email': adminMap['email'],
           'timestamp': FieldValue.serverTimestamp(),
           'tokenId': adminMap['tokenId'],
           'mobileNo':
               '${Config().countryMobileNoPrefix}${adminMap['mobileNo']}',
-          'accountStatus': adminMap['accountStatus'],
-          'profileImageUrl': url,
-          'password': adminMap['password'],
-          'activated': adminMap['activated'],
+          // 'accountStatus': adminMap['accountStatus'],
+          'profileImageUrl': url ?? adminMap['profileImageUrl'],
+          // 'password': adminMap['password'],
+          // 'activated': adminMap['activated'],
         },
         SetOptions(merge: true),
       );
@@ -1928,26 +1928,22 @@ class UserDataProvider extends BaseUserDataProvider {
         url = await storageTaskSnapshot.ref.getDownloadURL();
       }
 
-      UserCredential auth = await FirebaseAuth.instance
-          .createUserWithEmailAndPassword(
-              email: adminMap['email'], password: password);
+      //call function
+      Map<dynamic, dynamic> map = {
+        'mobileNo': '${Config().countryMobileNoPrefix}${adminMap['mobileNo']}',
+        'name': 'ADMIN_' + Random.secure().nextInt(10000).toString(),
+        'url': url,
+        'password': password,
+        'email': adminMap['email']
+      };
+      var refundRes = await http.post(
+        'URL_HERE', //TODO: change this URL //it should look something like : https://us-********-**********.cloudfunctions.net/createAdminAccount
+        body: map,
+      );
 
-      if (auth.user != null) {
-        await db.collection(Paths.adminsPath).doc(auth.user.uid).set({
-          'activated': true,
-          'accountStatus': 'Active',
-          'email': adminMap['email'],
-          'mobileNo':
-              '${Config().countryMobileNoPrefix}${adminMap['mobileNo']}',
-          'name': 'ADMIN_' + Random.secure().nextInt(10000).toString(),
-          'profileImageUrl': url,
-          'primaryAdmin': false,
-          'tokenId': '',
-          'uid': auth.user.uid,
-          'password': password,
-          'timestamp': FieldValue.serverTimestamp(),
-        });
-      } else {
+      var refund = jsonDecode(refundRes.body);
+
+      if (refund['message'] != 'Success') {
         return false;
       }
 
