@@ -173,7 +173,7 @@ class ProductListItem extends StatelessWidget {
                         child: Row(
                           children: <Widget>[
                             Text(
-                              'Unit:',
+                              'Serves:',
                               maxLines: 1,
                               style: GoogleFonts.poppins(
                                 fontSize: 12.0,
@@ -187,7 +187,7 @@ class ProductListItem extends StatelessWidget {
                             ),
                             Flexible(
                               child: Text(
-                                '${product.unitQuantity}',
+                                '${product.additionalInfo.serves}',
                                 maxLines: 1,
                                 overflow: TextOverflow.ellipsis,
                                 style: GoogleFonts.poppins(

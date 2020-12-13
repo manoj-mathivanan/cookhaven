@@ -153,24 +153,24 @@ class Review {
 }
 
 class AdditionalInfo {
-  String bestBefore;
-  String brand;
-  String manufactureDate;
-  String shelfLife;
+  String itemsNeeded;
+  String calories;
+  String cookingTime;
+  String serves;
 
   AdditionalInfo({
-    this.bestBefore,
-    this.brand,
-    this.manufactureDate,
-    this.shelfLife,
+    this.itemsNeeded,
+    this.calories,
+    this.cookingTime,
+    this.serves,
   });
 
   factory AdditionalInfo.fromHashmap(Map<String, dynamic> additionalInfo) {
     return AdditionalInfo(
-      bestBefore: additionalInfo['bestBefore'],
-      brand: additionalInfo['brand'],
-      manufactureDate: additionalInfo['manufactureDate'],
-      shelfLife: additionalInfo['shelfLife'],
+      itemsNeeded: additionalInfo['itemsNeeded'],
+      calories: additionalInfo['calories'],
+      cookingTime: additionalInfo['cookingTime'],
+      serves: additionalInfo['serves'],
     );
   }
 }

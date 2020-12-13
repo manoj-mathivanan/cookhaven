@@ -194,7 +194,7 @@ class _HomePageState extends State<HomePage>
                     mainAxisSize: MainAxisSize.max,
                     children: <Widget>[
                       Text(
-                        'Grocery Store',
+                        'Cook Haven',
                         style: GoogleFonts.poppins(
                           color: Colors.white,
                           fontSize: 19.0,
@@ -1003,7 +1003,9 @@ class _HomePageState extends State<HomePage>
 
           return Container(
             width: size.width,
-            height: size.width - size.width * 0.2 - 32.0,
+            height: categoryList.length <= 3
+                ? size.width - size.width * 0.5 - 32.0
+                : size.width - size.width * 0.2 - 32.0,
             padding: const EdgeInsets.symmetric(horizontal: 16.0),
             child: GridView.builder(
               padding: const EdgeInsets.all(0),
@@ -1014,7 +1016,7 @@ class _HomePageState extends State<HomePage>
                 mainAxisSpacing: 16.0,
                 crossAxisSpacing: 16.0,
               ),
-              itemCount: 6,
+              itemCount: categoryList.length,
               itemBuilder: (context, index) {
                 return AllCategoryItem(
                   category: categoryList[index],

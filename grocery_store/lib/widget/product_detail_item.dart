@@ -606,124 +606,10 @@ class _ProductDetailItemState extends State<ProductDetailItem> {
         ),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16.0),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            mainAxisSize: MainAxisSize.max,
-            crossAxisAlignment: CrossAxisAlignment.end,
-            children: <Widget>[
-              Container(
-                padding: EdgeInsets.symmetric(horizontal: 12.0, vertical: 5.0),
-                decoration: BoxDecoration(
-                  color: Colors.green.shade300,
-                  borderRadius: BorderRadius.circular(7.0),
-                ),
-                child: Row(
-                  children: <Widget>[
-                    Text(
-                      'Unit:',
-                      maxLines: 1,
-                      style: GoogleFonts.poppins(
-                        fontSize: 14.0,
-                        color: Colors.white,
-                        fontWeight: FontWeight.w500,
-                        letterSpacing: 0.5,
-                      ),
-                    ),
-                    SizedBox(
-                      width: 10.0,
-                    ),
-                    Text(
-                      widget.product.unitQuantity,
-                      maxLines: 1,
-                      style: GoogleFonts.poppins(
-                        fontSize: 14.0,
-                        color: Colors.white,
-                        fontWeight: FontWeight.w500,
-                        letterSpacing: 0.5,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ],
-          ),
-        ),
-        SizedBox(
-          height: 10.0,
-        ),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16.0),
           child: Divider(),
         ),
         SizedBox(
           height: 10.0,
-        ),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16.0),
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            mainAxisSize: MainAxisSize.max,
-            children: <Widget>[
-              Expanded(
-                child: Container(
-                  padding:
-                      EdgeInsets.symmetric(horizontal: 12.0, vertical: 8.0),
-                  decoration: BoxDecoration(
-                    color: Colors.black.withOpacity(0.05),
-                    borderRadius: BorderRadius.circular(15.0),
-                  ),
-                  child: Text(
-                    'Free Delivery',
-                    maxLines: 1,
-                    textAlign: TextAlign.center,
-                    overflow: TextOverflow.ellipsis,
-                    style: GoogleFonts.poppins(
-                      fontSize: 13.0,
-                      color: Colors.brown,
-                      fontWeight: FontWeight.w500,
-                      letterSpacing: 0.3,
-                    ),
-                  ),
-                ),
-              ),
-              SizedBox(
-                width: 16.0,
-              ),
-              Expanded(
-                child: Container(
-                  padding:
-                      EdgeInsets.symmetric(horizontal: 12.0, vertical: 8.0),
-                  decoration: BoxDecoration(
-                    color: Colors.black.withOpacity(0.05),
-                    borderRadius: BorderRadius.circular(15.0),
-                  ),
-                  child: Text(
-                    'Easy cancellation',
-                    maxLines: 1,
-                    textAlign: TextAlign.center,
-                    overflow: TextOverflow.ellipsis,
-                    style: GoogleFonts.poppins(
-                      fontSize: 13.0,
-                      color: Colors.brown,
-                      fontWeight: FontWeight.w500,
-                      letterSpacing: 0.3,
-                    ),
-                  ),
-                ),
-              ),
-            ],
-          ),
-        ),
-        SizedBox(
-          height: 10.0,
-        ),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16.0),
-          child: Divider(),
-        ),
-        SizedBox(
-          height: 5.0,
         ),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16.0),
@@ -783,9 +669,9 @@ class _ProductDetailItemState extends State<ProductDetailItem> {
                 height: 10.0,
               ),
               Text(
-                widget.product.additionalInfo.bestBefore.length == 0
-                    ? '\u2022 Best before: NA'
-                    : '\u2022 Best before: ${widget.product.additionalInfo.bestBefore}',
+                widget.product.additionalInfo.itemsNeeded.length == 0
+                    ? '\u2022 Items Needed: NA'
+                    : '\u2022 Items Needed: ${widget.product.additionalInfo.itemsNeeded}',
                 style: GoogleFonts.poppins(
                   fontSize: 13.5,
                   fontWeight: FontWeight.w400,
@@ -793,9 +679,9 @@ class _ProductDetailItemState extends State<ProductDetailItem> {
                 ),
               ),
               Text(
-                widget.product.additionalInfo.manufactureDate.length == 0
-                    ? '\u2022 Manufacture date: NA'
-                    : '\u2022 Manufacture date: ${widget.product.additionalInfo.manufactureDate}',
+                widget.product.additionalInfo.cookingTime.length == 0
+                    ? '\u2022 Cooking Time: NA'
+                    : '\u2022 Cooking Time: ${widget.product.additionalInfo.cookingTime}',
                 style: GoogleFonts.poppins(
                   fontSize: 13.5,
                   fontWeight: FontWeight.w400,
@@ -803,9 +689,9 @@ class _ProductDetailItemState extends State<ProductDetailItem> {
                 ),
               ),
               Text(
-                widget.product.additionalInfo.shelfLife.length == 0
-                    ? '\u2022 Shelf life: NA'
-                    : '\u2022 Shelf life: ${widget.product.additionalInfo.shelfLife}',
+                widget.product.additionalInfo.serves.length == 0
+                    ? '\u2022 Serves: 1 person'
+                    : '\u2022 Serves: ${widget.product.additionalInfo.serves}',
                 style: GoogleFonts.poppins(
                   fontSize: 13.5,
                   fontWeight: FontWeight.w400,
@@ -813,9 +699,9 @@ class _ProductDetailItemState extends State<ProductDetailItem> {
                 ),
               ),
               Text(
-                widget.product.additionalInfo.brand.length == 0
-                    ? '\u2022 Brand: NA'
-                    : '\u2022 Brand: ${widget.product.additionalInfo.brand}',
+                widget.product.additionalInfo.calories.length == 0
+                    ? '\u2022 Calories: NA'
+                    : '\u2022 Calories: ${widget.product.additionalInfo.calories}',
                 style: GoogleFonts.poppins(
                   fontSize: 13.5,
                   fontWeight: FontWeight.w400,

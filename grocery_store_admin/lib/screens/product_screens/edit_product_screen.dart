@@ -1132,13 +1132,13 @@ class _EditProductScreenState extends State<EditProductScreen> {
                               textAlignVertical: TextAlignVertical.center,
                               onSaved: (val) {
                                 product.update(
-                                  'bestBefore',
+                                  'itemsNeeded',
                                   (oldVal) => val.trim(),
                                   ifAbsent: () => val.trim(),
                                 );
                               },
                               initialValue:
-                                  widget.product.additionalInfo.bestBefore,
+                                  widget.product.additionalInfo.itemsNeeded,
                               enableInteractiveSelection: false,
                               style: GoogleFonts.poppins(
                                 color: Colors.black,
@@ -1168,7 +1168,7 @@ class _EditProductScreenState extends State<EditProductScreen> {
                                   fontWeight: FontWeight.w500,
                                   letterSpacing: 0.5,
                                 ),
-                                labelText: 'Best before',
+                                labelText: 'Items Needed',
                                 labelStyle: GoogleFonts.poppins(
                                   fontSize: 14.5,
                                   fontWeight: FontWeight.w500,
@@ -1186,12 +1186,12 @@ class _EditProductScreenState extends State<EditProductScreen> {
                               textAlignVertical: TextAlignVertical.center,
                               onSaved: (val) {
                                 product.update(
-                                  'brand',
+                                  'calories',
                                   (oldVal) => val.trim(),
                                   ifAbsent: () => val.trim(),
                                 );
                               },
-                              initialValue: widget.product.additionalInfo.brand,
+                              initialValue: widget.product.additionalInfo.calories,
                               enableInteractiveSelection: false,
                               style: GoogleFonts.poppins(
                                 color: Colors.black,
@@ -1221,7 +1221,7 @@ class _EditProductScreenState extends State<EditProductScreen> {
                                   fontWeight: FontWeight.w500,
                                   letterSpacing: 0.5,
                                 ),
-                                labelText: 'Brand',
+                                labelText: 'Calories',
                                 labelStyle: GoogleFonts.poppins(
                                   fontSize: 14.5,
                                   fontWeight: FontWeight.w500,
@@ -1239,13 +1239,13 @@ class _EditProductScreenState extends State<EditProductScreen> {
                               textAlignVertical: TextAlignVertical.center,
                               onSaved: (val) {
                                 product.update(
-                                  'manufactureDate',
+                                  'cookingTime',
                                   (oldVal) => val.trim(),
                                   ifAbsent: () => val.trim(),
                                 );
                               },
                               initialValue:
-                                  widget.product.additionalInfo.manufactureDate,
+                                  widget.product.additionalInfo.cookingTime,
                               enableInteractiveSelection: false,
                               style: GoogleFonts.poppins(
                                 color: Colors.black,
@@ -1275,7 +1275,7 @@ class _EditProductScreenState extends State<EditProductScreen> {
                                   fontWeight: FontWeight.w500,
                                   letterSpacing: 0.5,
                                 ),
-                                labelText: 'Manufacture date',
+                                labelText: 'Cooking Time',
                                 labelStyle: GoogleFonts.poppins(
                                   fontSize: 14.5,
                                   fontWeight: FontWeight.w500,
@@ -1293,13 +1293,13 @@ class _EditProductScreenState extends State<EditProductScreen> {
                               textAlignVertical: TextAlignVertical.center,
                               onSaved: (val) {
                                 product.update(
-                                  'shelfLife',
+                                  'serves',
                                   (oldVal) => val.trim(),
                                   ifAbsent: () => val.trim(),
                                 );
                               },
                               initialValue:
-                                  widget.product.additionalInfo.shelfLife,
+                                  widget.product.additionalInfo.serves,
                               enableInteractiveSelection: false,
                               style: GoogleFonts.poppins(
                                 color: Colors.black,
@@ -1329,7 +1329,7 @@ class _EditProductScreenState extends State<EditProductScreen> {
                                   fontWeight: FontWeight.w500,
                                   letterSpacing: 0.5,
                                 ),
-                                labelText: 'Shelf life',
+                                labelText: 'Serves',
                                 labelStyle: GoogleFonts.poppins(
                                   fontSize: 14.5,
                                   fontWeight: FontWeight.w500,

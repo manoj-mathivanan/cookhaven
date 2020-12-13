@@ -69,7 +69,7 @@ class _SplashScreenState extends State<SplashScreen> {
               height: 15,
             ),
             Text(
-              'Grocery Store Delivery',
+              'Cook Haven Delivery',
               style: GoogleFonts.poppins(
                 color: Colors.black.withOpacity(0.85),
                 fontSize: 14.0,

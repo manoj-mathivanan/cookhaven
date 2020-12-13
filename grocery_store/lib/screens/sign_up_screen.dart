@@ -1,4 +1,5 @@
 import 'package:grocery_store/blocs/sign_up_bloc/signup_bloc.dart';
+import 'package:grocery_store/config/config.dart';
 import 'package:grocery_store/screens/verification_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -95,7 +96,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
       _formKey.currentState.save();
       // signupBloc.add(
       //     SignupWithMobileNo(email: email, mobileNo: mobileNo, name: name));
-      mobileNo = '+91$mobileNo';
+      mobileNo = '${Config().countryMobileNoPrefix}$mobileNo';
       Navigator.push(
         context,
         MaterialPageRoute(
@@ -291,9 +292,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
                           validator: (String val) {
                             if (val.isEmpty) {
                               return 'Mobile No. is required';
-                            } else if (val.length != 10) {
-                              return 'Mobile No. is invalid';
                             }
+
                             return null;
                           },
                           onSaved: (val) {
@@ -315,7 +315,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                               fontWeight: FontWeight.w500,
                               letterSpacing: 0.5,
                             ),
-                            prefixText: '+91 ',
+                            prefixText: '${Config().countryMobileNoPrefix} ',
                             prefixStyle: GoogleFonts.poppins(
                               color: Colors.black87,
                               fontWeight: FontWeight.w500,
@@ -457,45 +457,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       ),
                     ),
                   ),
-                  SizedBox(
-                    height: 20.0,
-                  ),
-                  Container(
-                    padding: EdgeInsets.symmetric(horizontal: size.width * 0.1),
-                    child: Center(
-                      child: Row(
-                        children: <Widget>[
-                          Expanded(
-                            child: Divider(
-                              color: Colors.black54,
-                            ),
-                          ),
-                          Padding(
-                            padding:
-                                const EdgeInsets.symmetric(horizontal: 15.0),
-                            child: Text(
-                              'OR',
-                              style: GoogleFonts.poppins(
-                                color: Colors.black54,
-                                fontSize: 15.0,
-                                fontWeight: FontWeight.w400,
-                                letterSpacing: 0.5,
-                              ),
-                            ),
-                          ),
-                          Expanded(
-                            child: Divider(
-                              color: Colors.black54,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                  SizedBox(
-                    height: 20.0,
-                  ),
-                  buildGoogleSignupButton(size),
                   SizedBox(
                     height: 20.0,
                   ),

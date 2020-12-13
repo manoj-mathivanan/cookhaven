@@ -190,9 +190,18 @@ class _HomeScreenState extends State<HomeScreen> {
                     ],
                   );
                 }
-                return Icon(
-                  Icons.shopping_cart,
-                  size: 25.0,
+                return Container(
+                  width: 55.0,
+                  height: 55.0,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: Theme.of(context).primaryColor,
+                  ),
+                  child: Icon(
+                    Icons.shopping_cart,
+                    size: 25.0,
+                    color: Colors.white,
+                  ),
                 );
               },
             ),

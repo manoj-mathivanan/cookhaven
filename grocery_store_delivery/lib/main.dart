@@ -85,7 +85,7 @@ class MyApp extends StatelessWidget {
     ));
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Grocery Store Delivery',
+      title: 'Cook Haven Delivery',
       theme: ThemeData(
         primarySwatch: Colors.blue,
         primaryColorDark: Color(0xFF7936ff),

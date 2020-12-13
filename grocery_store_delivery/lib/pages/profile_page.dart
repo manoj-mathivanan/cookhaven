@@ -85,7 +85,7 @@ class _ProfilePageState extends State<ProfilePage>
   Future inviteAFriend() async {
     await FlutterShare.share(
       title: 'Checkout this amazing app!',
-      text: 'Grocery Store',
+      text: 'Cook Haven',
       linkUrl:
           Config().playStoreLink, //TODO: change it according to the platform
       chooserTitle: 'Share to apps',
@@ -95,7 +95,7 @@ class _ProfilePageState extends State<ProfilePage>
   Future feedback() async {
     final Email email = Email(
       body: '',
-      subject: 'Grocery Store Demo Support',
+      subject: 'Cook Haven Demo Support',
       isHTML: false,
       recipients: ['support.grocery_demo@gmail.com'],
     );

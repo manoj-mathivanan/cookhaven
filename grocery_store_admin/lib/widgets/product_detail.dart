@@ -388,9 +388,9 @@ class _ProductDetailItemState extends State<ProductDetailItem> {
                 height: 10.0,
               ),
               Text(
-                widget.product.additionalInfo.bestBefore.length == 0
-                    ? '\u2022 Best before: NA'
-                    : '\u2022 Best before: ${widget.product.additionalInfo.bestBefore}',
+                widget.product.additionalInfo.itemsNeeded.length == 0
+                    ? '\u2022 Items Needed: NA'
+                    : '\u2022 Items Needed: ${widget.product.additionalInfo.itemsNeeded}',
                 style: GoogleFonts.poppins(
                   fontSize: 13.5,
                   fontWeight: FontWeight.w400,
@@ -398,9 +398,9 @@ class _ProductDetailItemState extends State<ProductDetailItem> {
                 ),
               ),
               Text(
-                widget.product.additionalInfo.manufactureDate.length == 0
-                    ? '\u2022 Manufacture date: NA'
-                    : '\u2022 Manufacture date: ${widget.product.additionalInfo.manufactureDate}',
+                widget.product.additionalInfo.cookingTime.length == 0
+                    ? '\u2022 Cooking Time: NA'
+                    : '\u2022 Cooking Time: ${widget.product.additionalInfo.cookingTime}',
                 style: GoogleFonts.poppins(
                   fontSize: 13.5,
                   fontWeight: FontWeight.w400,
@@ -408,9 +408,9 @@ class _ProductDetailItemState extends State<ProductDetailItem> {
                 ),
               ),
               Text(
-                widget.product.additionalInfo.shelfLife.length == 0
-                    ? '\u2022 Shelf life: NA'
-                    : '\u2022 Shelf life: ${widget.product.additionalInfo.shelfLife}',
+                widget.product.additionalInfo.serves.length == 0
+                    ? '\u2022 Serves: NA'
+                    : '\u2022 Serves: ${widget.product.additionalInfo.serves}',
                 style: GoogleFonts.poppins(
                   fontSize: 13.5,
                   fontWeight: FontWeight.w400,
@@ -418,9 +418,9 @@ class _ProductDetailItemState extends State<ProductDetailItem> {
                 ),
               ),
               Text(
-                widget.product.additionalInfo.brand.length == 0
-                    ? '\u2022 Brand: NA'
-                    : '\u2022 Brand: ${widget.product.additionalInfo.brand}',
+                widget.product.additionalInfo.calories.length == 0
+                    ? '\u2022 Calories: NA'
+                    : '\u2022 Calories: ${widget.product.additionalInfo.calories}',
                 style: GoogleFonts.poppins(
                   fontSize: 13.5,
                   fontWeight: FontWeight.w400,

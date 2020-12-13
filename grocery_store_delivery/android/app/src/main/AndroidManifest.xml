@@ -4,7 +4,7 @@
 
     <application
         android:name=".Application"
-        android:label="Grocery Store Delivery"
+        android:label="Cook Haven Delivery"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

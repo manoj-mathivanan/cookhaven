@@ -194,7 +194,7 @@ class _InitialSetupScreenState extends State<InitialSetupScreen> {
                     ),
                   ),
                   Text(
-                    'Welcome to the initial setup of your grocery store app.',
+                    'Welcome to the initial setup of your Cook Haven app.',
                     style: GoogleFonts.poppins(
                       color: Colors.black87,
                       fontSize: 14.5,

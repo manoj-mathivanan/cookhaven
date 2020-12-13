@@ -1,4 +1,5 @@
 import 'package:grocery_store/blocs/sign_in_bloc/signin_bloc.dart';
+import 'package:grocery_store/config/config.dart';
 import 'package:grocery_store/pages/home_page.dart';
 import 'package:grocery_store/screens/home_screen.dart';
 import 'package:flutter/material.dart';
@@ -196,9 +197,10 @@ class _SignInScreenState extends State<SignInScreen> {
                       validator: (String val) {
                         if (val.isEmpty) {
                           return 'Mobile No. is required';
-                        } else if (val.length != 10) {
-                          return 'Mobile No. is invalid';
                         }
+                        // else if (val.length != 10) {
+                        //   return 'Mobile No. is invalid';
+                        // }
                         return null;
                       },
                       onSaved: (val) {
@@ -220,7 +222,7 @@ class _SignInScreenState extends State<SignInScreen> {
                           fontWeight: FontWeight.w500,
                           letterSpacing: 0.5,
                         ),
-                        prefixText: '+91 ',
+                        prefixText: '${Config().countryMobileNoPrefix} ',
                         prefixStyle: GoogleFonts.poppins(
                           color: Colors.black87,
                           fontWeight: FontWeight.w500,
@@ -294,10 +296,6 @@ class _SignInScreenState extends State<SignInScreen> {
                       ),
                     ),
                   ),
-                  SizedBox(
-                    height: 20.0,
-                  ),
-                  buildGoogleSignInButton(size),
                   SizedBox(
                     height: 20.0,
                   ),
@@ -420,7 +418,7 @@ class _SignInScreenState extends State<SignInScreen> {
   void signInWithMobile() {
     if (_formKey.currentState.validate()) {
       _formKey.currentState.save();
-      mobileNo = '+91$mobileNo';
+      mobileNo = '${Config().countryMobileNoPrefix}$mobileNo';
       signinBloc.add(CheckIfBlocked(mobileNo));
       inProgress = true;
     }

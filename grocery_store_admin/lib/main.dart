@@ -352,7 +352,7 @@ class MyApp extends StatelessWidget {
     ));
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Grocery Store Admin',
+      title: 'Cook Haven Admin',
       theme: ThemeData(
         primarySwatch: Colors.blue,
         primaryColorDark: Color(0xFF7936ff),

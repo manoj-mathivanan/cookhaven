@@ -910,7 +910,7 @@ class _AddProductScreenState extends State<AddProductScreen> {
                               textAlignVertical: TextAlignVertical.center,
                               onSaved: (val) {
                                 product.putIfAbsent(
-                                    'bestBefore', () => val.trim());
+                                    'itemsNeeded', () => val.trim());
                               },
                               enableInteractiveSelection: false,
                               style: GoogleFonts.poppins(
@@ -941,7 +941,7 @@ class _AddProductScreenState extends State<AddProductScreen> {
                                   fontWeight: FontWeight.w500,
                                   letterSpacing: 0.5,
                                 ),
-                                labelText: 'Best before',
+                                labelText: 'Items Needed',
                                 labelStyle: GoogleFonts.poppins(
                                   fontSize: 14.5,
                                   fontWeight: FontWeight.w500,
@@ -958,7 +958,7 @@ class _AddProductScreenState extends State<AddProductScreen> {
                             TextFormField(
                               textAlignVertical: TextAlignVertical.center,
                               onSaved: (val) {
-                                product.putIfAbsent('brand', () => val.trim());
+                                product.putIfAbsent('calories', () => val.trim());
                               },
                               enableInteractiveSelection: false,
                               style: GoogleFonts.poppins(
@@ -989,56 +989,7 @@ class _AddProductScreenState extends State<AddProductScreen> {
                                   fontWeight: FontWeight.w500,
                                   letterSpacing: 0.5,
                                 ),
-                                labelText: 'Brand',
-                                labelStyle: GoogleFonts.poppins(
-                                  fontSize: 14.5,
-                                  fontWeight: FontWeight.w500,
-                                  letterSpacing: 0.5,
-                                ),
-                                border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(12.0),
-                                ),
-                              ),
-                            ),
-                            SizedBox(
-                              height: 15.0,
-                            ),
-                            TextFormField(
-                              textAlignVertical: TextAlignVertical.center,
-                              onSaved: (val) {
-                                product.putIfAbsent(
-                                    'manufactureDate', () => val.trim());
-                              },
-                              enableInteractiveSelection: false,
-                              style: GoogleFonts.poppins(
-                                color: Colors.black,
-                                fontSize: 14.5,
-                                fontWeight: FontWeight.w500,
-                                letterSpacing: 0.5,
-                              ),
-                              textInputAction: TextInputAction.done,
-                              keyboardType: TextInputType.text,
-                              textCapitalization: TextCapitalization.words,
-                              decoration: InputDecoration(
-                                contentPadding:
-                                    EdgeInsets.symmetric(horizontal: 15.0),
-                                helperStyle: GoogleFonts.poppins(
-                                  color: Colors.black.withOpacity(0.65),
-                                  fontWeight: FontWeight.w500,
-                                  letterSpacing: 0.5,
-                                ),
-                                errorStyle: GoogleFonts.poppins(
-                                  fontSize: 13.0,
-                                  fontWeight: FontWeight.w500,
-                                  letterSpacing: 0.5,
-                                ),
-                                hintStyle: GoogleFonts.poppins(
-                                  color: Colors.black54,
-                                  fontSize: 14.5,
-                                  fontWeight: FontWeight.w500,
-                                  letterSpacing: 0.5,
-                                ),
-                                labelText: 'Manufacture date',
+                                labelText: 'Calories',
                                 labelStyle: GoogleFonts.poppins(
                                   fontSize: 14.5,
                                   fontWeight: FontWeight.w500,
@@ -1056,7 +1007,7 @@ class _AddProductScreenState extends State<AddProductScreen> {
                               textAlignVertical: TextAlignVertical.center,
                               onSaved: (val) {
                                 product.putIfAbsent(
-                                    'shelfLife', () => val.trim());
+                                    'cookingTime', () => val.trim());
                               },
                               enableInteractiveSelection: false,
                               style: GoogleFonts.poppins(
@@ -1087,7 +1038,56 @@ class _AddProductScreenState extends State<AddProductScreen> {
                                   fontWeight: FontWeight.w500,
                                   letterSpacing: 0.5,
                                 ),
-                                labelText: 'Shelf life',
+                                labelText: 'Cooking Time',
+                                labelStyle: GoogleFonts.poppins(
+                                  fontSize: 14.5,
+                                  fontWeight: FontWeight.w500,
+                                  letterSpacing: 0.5,
+                                ),
+                                border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(12.0),
+                                ),
+                              ),
+                            ),
+                            SizedBox(
+                              height: 15.0,
+                            ),
+                            TextFormField(
+                              textAlignVertical: TextAlignVertical.center,
+                              onSaved: (val) {
+                                product.putIfAbsent(
+                                    'serves', () => val.trim());
+                              },
+                              enableInteractiveSelection: false,
+                              style: GoogleFonts.poppins(
+                                color: Colors.black,
+                                fontSize: 14.5,
+                                fontWeight: FontWeight.w500,
+                                letterSpacing: 0.5,
+                              ),
+                              textInputAction: TextInputAction.done,
+                              keyboardType: TextInputType.text,
+                              textCapitalization: TextCapitalization.words,
+                              decoration: InputDecoration(
+                                contentPadding:
+                                    EdgeInsets.symmetric(horizontal: 15.0),
+                                helperStyle: GoogleFonts.poppins(
+                                  color: Colors.black.withOpacity(0.65),
+                                  fontWeight: FontWeight.w500,
+                                  letterSpacing: 0.5,
+                                ),
+                                errorStyle: GoogleFonts.poppins(
+                                  fontSize: 13.0,
+                                  fontWeight: FontWeight.w500,
+                                  letterSpacing: 0.5,
+                                ),
+                                hintStyle: GoogleFonts.poppins(
+                                  color: Colors.black54,
+                                  fontSize: 14.5,
+                                  fontWeight: FontWeight.w500,
+                                  letterSpacing: 0.5,
+                                ),
+                                labelText: 'Serves',
                                 labelStyle: GoogleFonts.poppins(
                                   fontSize: 14.5,
                                   fontWeight: FontWeight.w500,

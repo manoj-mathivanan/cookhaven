@@ -580,10 +580,10 @@ class UserDataProvider extends BaseUserDataProvider {
       //upload product to db
       db.collection(Paths.productsPath).doc(productId).set({
         'additionalInfo': {
-          'bestBefore': product['bestBefore'],
-          'brand': product['brand'],
-          'manufactureDate': product['manufactureDate'],
-          'shelfLife': product['shelfLife'],
+          'itemsNeeded': product['itemsNeeded'],
+          'calories': product['calories'],
+          'cookingTime': product['cookingTime'],
+          'serves': product['serves'],
         },
         'category': product['category'],
         'description': product['description'],
@@ -654,10 +654,10 @@ class UserDataProvider extends BaseUserDataProvider {
       db.collection(Paths.productsPath).doc(productId).set(
         {
           'additionalInfo': {
-            'bestBefore': product['bestBefore'],
-            'brand': product['brand'],
-            'manufactureDate': product['manufactureDate'],
-            'shelfLife': product['shelfLife'],
+            'itemsNeeded': product['itemsNeeded'],
+            'calories': product['calories'],
+            'cookingTime': product['cookingTime'],
+            'serves': product['serves'],
           },
           'category': product['category'],
           'description': product['description'],
